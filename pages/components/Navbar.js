@@ -16,11 +16,11 @@ const Navbar = () => {
     <div className='fixed w-full flex justify-between items-center p-8'>
 
     <div>
-        <h1 className='invisible sm:visible sm:text-xl font-semibold'>Logo Here</h1>
+        <h1 className='invisible sm:visible sm:text-lg font-semibold'>Logo Here</h1>
     </div>
     
     <div>
-        <ul className='hidden sm:flex space-x-8 sm:text-[1.8rem] font-semibold font-dark tracking-wider'>
+        <ul className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.8rem] font-semibold font-dark tracking-wider'>
             <li className='hover:scale-90 transition duration-200'>
                 <Link href='/' className='hover:text-[#A45483] transition duration-200'>Home</Link>
             </li>
@@ -56,19 +56,19 @@ const Navbar = () => {
         
         
         <ul className='space-y-5 text-3xl font-dark'>
-            <li>
+            <li className='active:scale-90 transition duration-150'>
                 <Link href='/' className='hover:text-[#A45483] transition duration-200'>Home</Link>
             </li>
-            <li>
+            <li className='active:scale-90 transition duration-150'>
                 <Link href='/about' className='hover:text-[#A45483] transition duration-200'>About</Link>
             </li>
-            <li>
+            <li className='active:scale-90 transition duration-150'>
                 <Link href='/templates' className='hover:text-[#A45483] transition duration-200'>Templates</Link>
             </li>
-            <li>
+            <li className='active:scale-90 transition duration-150'>
                 <Link href='/blog' className='hover:text-[#A45483] transition duration-200'>Blog</Link>
             </li>
-            <li>
+            <li className='active:scale-90 transition duration-150'>
                 <Link href='/contact' className='hover:text-[#A45483] transition duration-200'>Contact</Link>
             </li>
         </ul>
