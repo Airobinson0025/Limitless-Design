@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
   return (
-    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-150'>
+    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-150 rounded-lg'>
 
     <div>
         <h1 className='invisible sm:visible sm:text-lg font-semibold'>Logo Here</h1>

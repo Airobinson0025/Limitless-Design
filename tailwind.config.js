@@ -15,6 +15,7 @@ module.exports = {
         redhat: ['Red Hat Text', 'sans-serif'],
         libre: ['Libre Baskerville', 'serif'],
         dark: ['Darker Grotesque', 'sans-serif'],
+        lora: ['Lora', 'serif']
       }
     },
   },

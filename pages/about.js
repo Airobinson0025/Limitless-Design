@@ -1,13 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 const About = () => {
+
+    const router = useRouter()
     
-
-
-
-  return (
+    return (
     <div className='flex flex-col items-center justify-evenly h-full bg-fixed bg-center bg-cover custom-img'>
 
         <motion.div 
@@ -41,10 +41,10 @@ const About = () => {
                     duration: 1.0
                 }
             }
-        }}  className='mx-6 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-playfair font-bold text-[1.3rem] sm:text-[1.9rem] text-center text-[#800020]  mb-14 pt-8'>About Limitless Design</h1>
+        }}  className='mx-6 font-dark text- sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
+            <h1 className='font-lora font-bold text-[1.8rem] sm:text-[3rem] text-center text-[#800020] underline underline-offset-[10px] decoration-4 tracking-[4px] mb-14 p-6'>About Us</h1>
 
-            <div className='text-stone-900 space-y-6 sm:border-l-4 sm:border-[#800020] p-6'>
+            <div className='text-stone-900 space-y-5 sm:border-l-4 sm:border-neutral-600 p-6'>
             
                 <p>Welcome to Limitless Design&apos;s About Page!</p>
             
@@ -66,9 +66,20 @@ const About = () => {
 
                 </div>
 
-                <div>
+                <div className=''>
                     <p>Bri-Anna Johnson</p>
-                    <p>Limitless Design</p>
+
+                    <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-3 mt-12'>
+                       <p className='font-playfair font-bold text-[1.4rem] sm:text-[1.8rem] text-[#800020] text-center'>Limitless Design</p>
+                       <motion.button
+                        onClick={() => {
+                            router.push('/contact')
+                        }}
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.8}} 
+                        className='font-redhat text-[#800020] text-md sm:text-lg border-[3px] border-[#800020] rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#800020] transition duration-300'>Contact Us</motion.button>
+        
+                    </div>   
                 </div>
 
             </div>
