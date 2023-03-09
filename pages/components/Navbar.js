@@ -15,6 +15,8 @@ const Navbar = () => {
         setDropMenu(!dropMenu)
     }
 
+    
+
     useEffect(() =>{
         const changeColor = () => {
             if(window.scrollY >= 90) {
@@ -44,27 +46,27 @@ const Navbar = () => {
     <div>
         <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.7rem] font-semibold font-dark tracking-wider'>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/home' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Home</Link>
+                <Link href='/home' className='text-stone-900 hover:text-[#800020] transition duration-300'>Home</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/about' className='text-stone-900 hover:text-[#A45483] transition duration-300'>About</Link>
+                <Link href='/about' className='text-stone-900 hover:text-[#800020] transition duration-300'>About</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/templates' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Templates</Link>
+                <Link href='/templates' className='text-stone-900 hover:text-[#800020] transition duration-300'>Templates</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/blog' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Blog</Link>
+                <Link href='/blog' className='text-stone-900 hover:text-[#800020] transition duration-300'>Blog</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/contact' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Contact</Link>
+                <Link href='/contact' className='text-stone-900 hover:text-[#800020] transition duration-300'>Contact</Link>
             </li>
         </ul>
     </div>
 
     
     <div className='sm:hidden'>
-        <button onClick={handleClick} className='border-2 border-black py-2 px-2 rounded-full'>
-        {dropMenu ? null : <AiOutlineMenu size={25}/>}
+        <button onClick={handleClick} className='bg-[#800020] py-2 px-2 rounded-full'>
+        {dropMenu ? null : <AiOutlineMenu size={25} color='white'/>}
         </button>
     </div>
 
@@ -72,26 +74,26 @@ const Navbar = () => {
 
     <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-stone-900 w-full h-screen bg-white ease-in duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-1000px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-300' }>
 
-    <button onClick={handleClick} className='border-2 border-black py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
-        {dropMenu ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25}/>}
+    <button onClick={handleClick} className='bg-[#800020] py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
+        {dropMenu ? <AiOutlineClose size={25} color='white'/> : null }
     </button>
         
         
         <ul className='space-y-5 text-[2rem] font-dark'>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/home' className='hover:text-[#A45483] transition duration-300'>Home</Link>
+                <Link href='/home' onClick={handleClick} className='hover:text-[#800020] transition duration-300'>Home</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/about' className='hover:text-[#A45483] transition duration-300'>About</Link>
+                <Link href='/about' onClick={handleClick} className='hover:text-[#800020] transition duration-300'>About</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/templates' className='hover:text-[#A45483] transition duration-300'>Templates</Link>
+                <Link href='/templates' onClick={handleClick} className='hover:text-[#800020] transition duration-300'>Templates</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/blog' className='hover:text-[#A45483] transition duration-300'>Blog</Link>
+                <Link href='/blog' onClick={handleClick} className='hover:text-[#800020] transition duration-300'>Blog</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/contact' className='hover:text-[#A45483] transition duration-300'>Contact</Link>
+                <Link href='/contact' onClick={handleClick} className='hover:text-[#800020] transition duration-300'>Contact</Link>
             </li>
         </ul>
     </div>

@@ -5,15 +5,15 @@ const About = () => {
   return (
     <div className='flex flex-col items-center justify-evenly h-full bg-fixed bg-center bg-cover custom-img'>
 
-        <div className='mt-48 mb-16'>
-            <Image src='/AboutPage.jpeg' alt='about page img' width={345} height={645}
-            className='rounded-lg mx-6s shadow-lg shadow-neutral-400'/>
+        <div className='mt-48 mb-16 mx-6'>
+            <Image src='/AboutPage.jpeg' alt='about page img' width={350} height={650}
+            className='rounded-lg mx-6s shadow-lg shadow-neutral-400 w-auto'/>
         </div>
 
         <div className='mx-8 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-playfair font-bold text-[1.2rem] sm:text-[1.9rem] text-center text-stone-700  mb-20 pt-10'>~ About Limitless Design ~</h1>
+            <h1 className='font-playfair font-bold text-[1.2rem] sm:text-[1.9rem] text-center text-[#800020] underline underline-offset-8 decoration-2 decoration-stone-900  mb-20 pt-10'>~ About Limitless Design ~</h1>
 
-            <div className='text-stone-700 space-y-6 sm:border-l-4 sm:border-stone-300 p-6'>
+            <div className='text-stone-900 space-y-6 sm:border-l-4 sm:border-[#800020] p-6'>
             
                 <p>Welcome to Limitless Design&apos;s About Page!</p>
             
