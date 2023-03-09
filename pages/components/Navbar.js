@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
 
@@ -43,25 +44,37 @@ const Navbar = () => {
         <h1 className='invisible sm:visible sm:text-lg font-semibold'>Logo Here</h1>
     </div>
     
-    <div>
+    <motion.div initial='hidden' animate='visible' variants={{
+        hidden: {
+            scale: .8,
+            opacity: 0
+        },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+                duration: 1.0
+            }
+        }
+    }} >
         <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.4rem] md:text-[1.6rem] font-bold font-dark tracking-wider'>
-            <li className='hover:scale-95 transition duration-300'>
+            <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/home' className='text-stone-900 hover:text-[#800020] transition duration-300'>Home</Link>
-            </li>
-            <li className='hover:scale-95 transition duration-300'>
+            </motion.li>
+            <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/about' className='text-stone-900 hover:text-[#800020] transition duration-300'>About</Link>
-            </li>
-            <li className='hover:scale-95 transition duration-300'>
+            </motion.li>
+            <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/templates' className='text-stone-900 hover:text-[#800020] transition duration-300'>Templates</Link>
-            </li>
-            <li className='hover:scale-95 transition duration-300'>
+            </motion.li>
+            <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/blog' className='text-stone-900 hover:text-[#800020] transition duration-300'>Blog</Link>
-            </li>
-            <li className='hover:scale-95 transition duration-300'>
+            </motion.li>
+            <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/contact' className='text-stone-900 hover:text-[#800020] transition duration-300'>Contact</Link>
-            </li>
+            </motion.li>
         </ul>
-    </div>
+    </motion.div>
 
     
     <div className='sm:hidden'>
