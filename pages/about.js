@@ -42,9 +42,9 @@ const About = () => {
                 }
             }
         }}  className='mx-6 font-dark text- sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-work font-bold text-[1.8rem] sm:text-[4rem] text-center text-stone-700  tracking-[2px] mb-14 p-6'>About Us</h1>
+            <h1 className='font-work font-bold text-[2.8rem] sm:text-[4rem] text-center text-stone-700  tracking-[2px] mb-14 p-6'>About Us</h1>
 
-            <div className='text-stone-900 space-y-5 sm:border-l-4 sm:border-neutral-600 p-6'>
+            <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] space-y-5 sm:border-l-4 sm:border-neutral-600 p-6'>
             
                 <p>Welcome to Limitless Design&apos;s About Page!</p>
             
