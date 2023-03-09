@@ -44,19 +44,19 @@ const Navbar = () => {
     <div>
         <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.7rem] font-semibold font-dark tracking-wider'>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/home' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Home</Link>
+                <Link href='/home' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Home</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/about' className='text-stone-700 hover:text-[#A45483] transition duration-300'>About</Link>
+                <Link href='/about' className='text-stone-900 hover:text-[#A45483] transition duration-300'>About</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/templates' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Templates</Link>
+                <Link href='/templates' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Templates</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/blog' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Blog</Link>
+                <Link href='/blog' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Blog</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/contact' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Contact</Link>
+                <Link href='/contact' className='text-stone-900 hover:text-[#A45483] transition duration-300'>Contact</Link>
             </li>
         </ul>
     </div>
