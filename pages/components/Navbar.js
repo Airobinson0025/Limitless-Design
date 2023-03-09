@@ -6,15 +6,20 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
 
     const [ dropMenu, setDropMenu ] = useState(false)
-    const [ color, setColor ] = useState('transparent')
+    const [ color, setColor ] = useState(true)
     const [ textColor, setTextColor ] = useState('black')
-    const [ backdrop, setBackdrop ] = useState('')
-    const [ shadow, setShadow ] = useState('')
+    const [ backdrop, setBackdrop ] = useState(true)
+    const [ shadow, setShadow ] = useState(true)
+    
+    
     
 
     const handleClick = () => {
-        setDropMenu(!dropMenu)
+        setDropMenu(!dropMenu);
+
+
     }
+    
 
     
 
@@ -79,7 +84,7 @@ const Navbar = () => {
     
     <div className='sm:hidden'>
         <button onClick={handleClick} className='bg-[#800020] py-2 px-2 rounded-full'>
-        {dropMenu ? null : <AiOutlineMenu size={25} color='white'/>}
+        {dropMenu ? null : <AiOutlineMenu size={28} color='white'/>}
         </button>
     </div>
 
@@ -88,7 +93,7 @@ const Navbar = () => {
     <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-stone-900 w-full h-screen bg-white ease-in duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-1000px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-300' }>
 
     <button onClick={handleClick} className='bg-[#800020] py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
-        {dropMenu ? <AiOutlineClose size={25} color='white'/> : null }
+        {dropMenu ? <AiOutlineClose size={28} color='white'/> : null }
     </button>
         
         
