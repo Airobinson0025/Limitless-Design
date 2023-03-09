@@ -1,40 +1,62 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 const Navbar = () => {
 
     const [ dropMenu, setDropMenu ] = useState(false)
+    const [ color, setColor ] = useState('transparent')
+    const [ textColor, setTextColor ] = useState('black')
+    const [ backdrop, setBackdrop ] = useState('')
+    const [ shadow, setShadow ] = useState('')
+    
 
     const handleClick = () => {
         setDropMenu(!dropMenu)
     }
 
+    useEffect(() =>{
+        const changeColor = () => {
+            if(window.scrollY >= 90) {
+                setColor('rgba(0,0,0,0.0.5')
+                setTextColor('black')
+                setBackdrop('blur(20px)')
+                setShadow('0 20px 30px rgba(0,0,0,0.15)')
+            } else {
+                setColor('transparent')
+                setTextColor('black')
+                setBackdrop('')
+                setShadow('')
+            }
+        }
+        window.addEventListener('scroll', changeColor)
+    }, [])
+
 
 
   return (
-    <div className='fixed w-full flex justify-between items-center p-8'>
+    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-200'>
 
     <div>
         <h1 className='invisible sm:visible sm:text-lg font-semibold'>Logo Here</h1>
     </div>
     
     <div>
-        <ul className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.8rem] font-semibold font-dark tracking-wider'>
+        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.7rem] font-semibold font-dark tracking-wider'>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/home' className='hover:text-[#A45483] transition duration-300'>Home</Link>
+                <Link href='/home' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Home</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/about' className='hover:text-[#A45483] transition duration-300'>About</Link>
+                <Link href='/about' className='text-stone-700 hover:text-[#A45483] transition duration-300'>About</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/templates' className='hover:text-[#A45483] transition duration-300'>Templates</Link>
+                <Link href='/templates' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Templates</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/blog' className='hover:text-[#A45483] transition duration-300'>Blog</Link>
+                <Link href='/blog' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Blog</Link>
             </li>
             <li className='hover:scale-95 transition duration-300'>
-                <Link href='/contact' className='hover:text-[#A45483] transition duration-300'>Contact</Link>
+                <Link href='/contact' className='text-stone-700 hover:text-[#A45483] transition duration-300'>Contact</Link>
             </li>
         </ul>
     </div>

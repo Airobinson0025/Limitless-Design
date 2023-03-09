@@ -6,20 +6,20 @@ const About = () => {
     <div className='flex flex-col items-center justify-evenly h-full bg-fixed bg-center bg-cover custom-img'>
 
         <div className='mt-48 mb-16'>
-            <Image src='/AboutPage.jpeg' alt='about page img' width={500} height={800}
-            className='rounded-lg px-6'/>
+            <Image src='/AboutPage.jpeg' alt='about page img' width={345} height={645}
+            className='rounded-lg mx-6s shadow-lg shadow-neutral-400'/>
         </div>
 
-        <div className='mx-8 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-4 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-playfair font-bold text-[1.2rem] sm:text-[1.9rem] text-center underline underline-offset-8 decoration-2 mb-20 pt-10'>~ About Limitless Design ~</h1>
+        <div className='mx-8 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
+            <h1 className='font-playfair font-bold text-[1.2rem] sm:text-[1.9rem] text-center text-stone-700  mb-20 pt-10'>~ About Limitless Design ~</h1>
 
-            <div className='space-y-6 sm:border-l-4 sm:border-neutral-600 p-6'>
+            <div className='text-stone-700 space-y-6 sm:border-l-4 sm:border-stone-300 p-6'>
             
-                <p>Welcome to Limitless Design's About Page!</p>
+                <p>Welcome to Limitless Design&apos;s About Page!</p>
             
-                <p>At Limitless Design, we believe that a great logo is an essential aspect of any business or brand. A logo is a visual representation of your company's values, mission, and personality. It is the first impression that potential customers have of your brand, and it should be memorable and visually appealing.</p>
+                <p>At Limitless Design, we believe that a great logo is an essential aspect of any business or brand. A logo is a visual representation of your company&apos;s values, mission, and personality. It is the first impression that potential customers have of your brand, and it should be memorable and visually appealing.</p>
             
-                <p>Our team of talented designers has years of experience in creating unique and effective logos for businesses of all sizes. We are passionate about our work and take pride in delivering high-quality designs that exceed our clients' expectations.</p>
+                <p>Our team of talented designers has years of experience in creating unique and effective logos for businesses of all sizes. We are passionate about our work and take pride in delivering high-quality designs that exceed our clients expectations.</p>
 
                 <p>Our design process begins with a thorough consultation with each client to understand their business, their target audience, and their vision for their logo. From there, we conduct extensive research to ensure that our designs are not only visually stunning but also strategically effective.</p>
 
