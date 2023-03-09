@@ -46,7 +46,7 @@ const Navbar = () => {
     
     <motion.div initial='hidden' animate='visible' variants={{
         hidden: {
-            scale: .8,
+            scale: .9,
             opacity: 0
         },
         visible: {

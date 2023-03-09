@@ -10,12 +10,38 @@ const About = () => {
   return (
     <div className='flex flex-col items-center justify-evenly h-full bg-fixed bg-center bg-cover custom-img'>
 
-        <div className='mt-48 mb-16 mx-6'>
+        <motion.div 
+        initial='hidden' animate='visible' variants={{
+            hidden: {
+                scale: .9,
+                opacity: 0
+            },
+            visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                    duration: 1.0
+                }
+            }
+        }}  className='mt-48 mb-16 mx-6'>
             <Image src='/AboutPage.jpeg' alt='about page img' width={350} height={650}
             className='rounded-lg mx-6s shadow-lg shadow-neutral-400 w-auto'/>
-        </div>
+        </motion.div>
 
-        <div className='mx-6 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
+        <motion.div 
+        initial='hidden' animate='visible' variants={{
+            hidden: {
+                scale: .9,
+                opacity: 0
+            },
+            visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                    duration: 1.0
+                }
+            }
+        }}  className='mx-6 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
             <h1 className='font-playfair font-bold text-[1.1rem] sm:text-[1.9rem] text-center text-[#800020]  mb-14 pt-8'>About Limitless Design</h1>
 
             <div className='text-stone-900 space-y-6 sm:border-l-4 sm:border-[#800020] p-6'>
@@ -50,7 +76,7 @@ const About = () => {
 
 
             
-        </div>
+        </motion.div>
 
     </div>
   )
