@@ -70,7 +70,7 @@ const Navbar = () => {
 
     {/* mobile menu */}
 
-    <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-1000px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-300' }>
+    <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-stone-900 w-full h-screen bg-white ease-in duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-1000px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-300' }>
 
     <button onClick={handleClick} className='border-2 border-black py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
         {dropMenu ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25}/>}
