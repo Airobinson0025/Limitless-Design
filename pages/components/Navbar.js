@@ -44,7 +44,7 @@ const Navbar = () => {
     </div>
     
     <div>
-        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.7rem] font-semibold font-dark tracking-wider'>
+        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.4rem] md:text-[1.6rem] font-bold font-dark tracking-wider'>
             <li className='hover:scale-95 transition duration-300'>
                 <Link href='/home' className='text-stone-900 hover:text-[#800020] transition duration-300'>Home</Link>
             </li>

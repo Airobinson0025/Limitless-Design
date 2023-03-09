@@ -10,8 +10,8 @@ const About = () => {
             className='rounded-lg mx-6s shadow-lg shadow-neutral-400 w-auto'/>
         </div>
 
-        <div className='mx-8 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-playfair font-bold text-[1.2rem] sm:text-[1.9rem] text-center text-[#800020] underline underline-offset-8 decoration-2 decoration-stone-900  mb-20 pt-10'>~ About Limitless Design ~</h1>
+        <div className='mx-6 font-dark text-lg sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
+            <h1 className='font-playfair font-bold text-[1.1rem] sm:text-[1.9rem] text-center text-[#800020]  mb-14 pt-8'>About Limitless Design</h1>
 
             <div className='text-stone-900 space-y-6 sm:border-l-4 sm:border-[#800020] p-6'>
             
