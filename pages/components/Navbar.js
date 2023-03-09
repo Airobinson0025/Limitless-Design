@@ -24,11 +24,11 @@ const Navbar = () => {
     
     useEffect(() =>{
         const changeColor = () => {
-            if(window.scrollY >= 90) {
+            if(window.scrollY >= 20) {
                 setColor('rgba(0,0,0,0.0.5')
                 setTextColor('black')
                 setBackdrop('blur(20px)')
-                setShadow('0 20px 30px rgba(0,0,0,0.08)')
+                setShadow('0 20px 30px rgba(0,0,0,0.095)')
             } else {
                 setColor('transparent')
                 setTextColor('black')

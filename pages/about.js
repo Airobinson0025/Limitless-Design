@@ -25,7 +25,7 @@ const About = () => {
             }
         }}  className='mt-48 mb-16 mx-6'>
             <Image src='/AboutPage.jpeg' alt='about page img' width={350} height={650}
-            className='rounded-lg mx-6s shadow-lg shadow-neutral-400 w-auto'/>
+            className='rounded-lg mx-6s shadow-2xl shadow-neutral-500 w-auto'/>
         </motion.div>
 
         <motion.div 
@@ -41,10 +41,10 @@ const About = () => {
                     duration: 1.0
                 }
             }
-        }}  className='mx-6 font-dark sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-work font-bold text-[3.8rem] sm:text-[4.5rem] text-center text-[#A24857]  tracking-[3px] mb-14 p-6'>About Us</h1>
+        }}  className='mx-6 font-dark sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-2xl shadow-neutral-500'>
+            <h1 className='font-work font-bold text-[3.8rem] sm:text-[4.5rem] text-center text-[#A24857]  tracking-[3px] mb-8 p-6'>About Us</h1>
 
-            <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] space-y-5 sm:border-l-4 sm:border-neutral-600 p-6'>
+            <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] space-y-5  sm:border-neutral-600 p-6'>
             
                 <p>Welcome to Limitless Design&apos;s About Page!</p>
             
