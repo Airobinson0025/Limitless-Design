@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
 
     const [ dropMenu, setDropMenu ] = useState(false)
-    const [ color, setColor ] = useState(true)
+    const [ color, setColor ] = useState('transparent')
     const [ textColor, setTextColor ] = useState('black')
     const [ backdrop, setBackdrop ] = useState(true)
     const [ shadow, setShadow ] = useState(true)
@@ -22,14 +22,13 @@ const Navbar = () => {
     
 
     
-
     useEffect(() =>{
         const changeColor = () => {
             if(window.scrollY >= 90) {
                 setColor('rgba(0,0,0,0.0.5')
                 setTextColor('black')
                 setBackdrop('blur(20px)')
-                setShadow('0 20px 30px rgba(0,0,0,0.15)')
+                setShadow('0 20px 30px rgba(0,0,0,0.08)')
             } else {
                 setColor('transparent')
                 setTextColor('black')
@@ -40,10 +39,13 @@ const Navbar = () => {
         window.addEventListener('scroll', changeColor)
     }, [])
 
+    
+    
+
 
 
   return (
-    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-200'>
+    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-150'>
 
     <div>
         <h1 className='invisible sm:visible sm:text-lg font-semibold'>Logo Here</h1>
@@ -90,7 +92,7 @@ const Navbar = () => {
 
     {/* mobile menu */}
 
-    <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-stone-900 w-full h-screen bg-white ease-in duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-1000px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-in duration-300' }>
+    <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-stone-900 w-full h-screen bg-white ease-in-out duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-out duration-300' }>
 
     <button onClick={handleClick} className='bg-[#800020] py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
         {dropMenu ? <AiOutlineClose size={28} color='white'/> : null }
