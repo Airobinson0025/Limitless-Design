@@ -41,8 +41,8 @@ const About = () => {
                     duration: 1.0
                 }
             }
-        }}  className='mx-6 font-dark text- sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
-            <h1 className='font-work font-bold text-[2.8rem] sm:text-[4rem] text-center text-stone-700  tracking-[2px] mb-14 p-6'>About Us</h1>
+        }}  className='mx-6 font-dark sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-lg shadow-neutral-400'>
+            <h1 className='font-work font-bold text-[3.8rem] sm:text-[4.5rem] text-center text-[#A24857]  tracking-[3px] mb-14 p-6'>About Us</h1>
 
             <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] space-y-5 sm:border-l-4 sm:border-neutral-600 p-6'>
             
@@ -69,15 +69,15 @@ const About = () => {
                 <div className=''>
                     <p>Bri-Anna Johnson</p>
 
-                    <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-3 mt-12'>
-                       <p className='font-playfair font-bold text-[1.4rem] sm:text-[1.8rem] text-[#800020] text-center'>Limitless Design</p>
+                    <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-6 mt-12'>
+                       <p className='font-playfair font-bold text-[1.7rem] sm:text-[1.8rem] text-[#A24857] text-center'>Limitless Design</p>
                        <motion.button
                         onClick={() => {
                             router.push('/contact')
                         }}
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.8}} 
-                        className='font-redhat text-[#800020] text-md sm:text-lg border-[3px] border-[#800020] rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#800020] transition duration-300'>Contact Us</motion.button>
+                        className='font-redhat text-[#A24857] text-md sm:text-lg border-[3px] border-[#A24857] rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#A24857] transition duration-300'>Contact Us</motion.button>
         
                     </div>   
                 </div>
