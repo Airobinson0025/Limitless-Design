@@ -13,5 +13,17 @@ datasource db {
 model User {
   id    Int     @id @default(autoincrement())
   name  String?
-  email String
+  email String  @unique
+  role  Role    @default(USER)
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  title     String
+}
+
+enum Role {
+  USER
+  ADMIN
 }
