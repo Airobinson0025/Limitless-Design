@@ -48,7 +48,7 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-200 rounded-lg'>
 
     <div>
-        <h1 className='text-3xl sm:text-4xl text-stone-200 font-vibes font-bold bg-stone-800 p-3 rounded-xl '>LD</h1>
+        <h1 className='text-3xl sm:text-4xl text-stone-200 font-vibes font-bold bg-[#A24857] p-3 rounded-xl '>LD</h1>
     </div>
     
     <motion.div initial='hidden' animate='visible' variants={{
