@@ -42,7 +42,7 @@ const About = () => {
                 }
             }
         }}  className='mx-6 font-dark sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-2xl shadow-neutral-500'>
-            <h1 className='font-work font-bold text-[2.8rem] sm:text-[4.5rem] text-center sm:text-left text-[#A24857] tracking-[3px] border-l-4 border-[#A24857] mb-8 ml-6 sm:pl-6'>About Us</h1>
+            <h1 className='font-work font-bold text-[2.8rem] sm:text-[4.5rem] text-left pl-6 text-[#A24857] tracking-[3px] border-l-4 border-[#A24857] mb-8 ml-6'>About Us</h1>
 
             <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] space-y-5  sm:border-neutral-600 p-6'>
             
