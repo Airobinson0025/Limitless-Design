@@ -24,7 +24,7 @@ const About = () => {
                 }
             }
         }}  className='mt-36 mb-16 mx-6'>
-            <Image src='/headshot.png' alt='about page img' width={350} height={650}
+            <Image src='/headshot.jpg' alt='about page img' width={350} height={650}
             className='rounded-lg mx-6s shadow-2xl shadow-neutral-500 w-auto'/>
         </motion.div>
 
