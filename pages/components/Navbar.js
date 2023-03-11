@@ -48,7 +48,7 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-200 rounded-lg'>
 
     <div>
-        <h1 className='text-3xl sm:text-4xl text-stone-200 font-vibes font-bold bg-[#A24857] p-3 rounded-xl '>LD</h1>
+        <h1 className='text-2xl sm:text-3xl text-stone-200 font-vibes font-bold bg-[#A24857] p-3 rounded-xl '>LD</h1>
     </div>
     
     <motion.div initial='hidden' animate='visible' variants={{
@@ -86,7 +86,7 @@ const Navbar = () => {
     
     <div className='sm:hidden'>
         <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full'>
-        {dropMenu ? null : <AiOutlineMenu size={28} color='white'/>}
+        {dropMenu ? null : <AiOutlineMenu size={32} color='white'/>}
         </button>
     </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
     <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-stone-900 w-full h-screen bg-white ease-in-out duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center w-full h-screen bg-white ease-out duration-300' }>
 
     <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
-        {dropMenu ? <AiOutlineClose size={28} color='white'/> : null }
+        {dropMenu ? <AiOutlineClose size={32} color='white'/> : null }
     </button>
         
         
