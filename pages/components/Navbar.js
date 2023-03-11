@@ -25,7 +25,7 @@ const Navbar = () => {
     useEffect(() =>{
         const changeColor = () => {
             if(window.scrollY >= 20) {
-                setColor('rgba(0,0,0,0.0.5')
+                setColor('#f5f5f4')
                 setTextColor('black')
                 setBackdrop('blur(20px)')
                 setShadow('0 20px 30px rgba(0,0,0,0.095)')
@@ -48,7 +48,7 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-6 ease-in duration-200 rounded-lg'>
 
     <div>
-        <h1 className='invisible sm:visible sm:text-lg font-semibold'>Logo Here</h1>
+        <h1 className='text-3xl sm:text-4xl text-stone-200 font-playfair font-bold bg-[#A24857] p-2 rounded-xl '>LD</h1>
     </div>
     
     <motion.div initial='hidden' animate='visible' variants={{
