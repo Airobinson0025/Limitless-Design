@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
@@ -45,10 +46,10 @@ const Navbar = () => {
 
 
   return (
-    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center p-4 ease-in duration-200 rounded-lg'>
+    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center ease-in duration-200 rounded-lg'>
 
-    <div>
-        <h1 className='text-2xl sm:text-3xl text-stone-100 font-vibes font-bold bg-[#A24857] p-2 rounded-xl '>LD</h1>
+    <div className='pl-6'>
+        <Image src='/LimitlessLogo.png' alt='logo' width={115} height={70} />
     </div>
     
     <motion.div initial='hidden' animate='visible' variants={{
@@ -64,7 +65,7 @@ const Navbar = () => {
             }
         }
     }} >
-        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.4rem] md:text-[1.6rem] font-bold font-dark tracking-wider'>
+        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.4rem] md:text-[1.7rem] font-bold font-dark tracking-wider'>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/home' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Home</Link>
             </motion.li>
@@ -99,7 +100,7 @@ const Navbar = () => {
     </button>
         
         
-        <ul className='space-y-5 text-[2rem] font-dark'>
+        <ul className='space-y-5 text-[2.4rem] font-dark'>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/home' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Home</Link>
             </li>
@@ -115,7 +116,12 @@ const Navbar = () => {
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/contact' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Contact</Link>
             </li>
+           
         </ul>
+        <div className='absolute bottom-10'>
+            <Image src='/LimitlessLogo.png' alt='logo' width={220} height={100} />
+        </div>
+        
     </div>
 
     
