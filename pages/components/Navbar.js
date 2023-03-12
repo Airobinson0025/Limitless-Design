@@ -73,6 +73,9 @@ const Navbar = () => {
                 <Link href='/about' className='text-stone-900 hover:text-[#A24857] transition duration-300'>About</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
+                <Link href='/blog' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Gallery</Link>
+            </motion.li>
+            <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/templates' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Templates</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
