@@ -46,11 +46,11 @@ const Navbar = () => {
 
 
   return (
-    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center ease-in duration-200 rounded-lg'>
+    <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center ease-in duration-200 rounded-md p-2'>
 
-    <div className='pl-6'>
+    <div className='pl-4'>
         <Link href='/' className='w-auto h-auto'>
-            <Image src='/LimitlessLogo.png' alt='logo' width={87} height={40} />
+            <Image src='/LimitlessLogo2.png' alt='logo' width={110} height={80} />
         </Link>
     </div>
     
@@ -78,7 +78,7 @@ const Navbar = () => {
                 <Link href='/gallery' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Gallery</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
-                <Link href='/templates' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Templates</Link>
+                <Link href='/templates' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Shop</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/blog' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Blog</Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
                 <Link href='/gallery' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Gallery</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/templates' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Templates</Link>
+                <Link href='/templates' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Shop</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/blog' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Blog</Link>
