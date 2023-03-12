@@ -73,7 +73,7 @@ const Navbar = () => {
                 <Link href='/about' className='text-stone-900 hover:text-[#A24857] transition duration-300'>About</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
-                <Link href='/blog' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Gallery</Link>
+                <Link href='/gallery' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Gallery</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/templates' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Templates</Link>
@@ -103,12 +103,15 @@ const Navbar = () => {
     </button>
         
         
-        <ul className='space-y-5 text-[2.4rem] font-dark'>
+        <ul className='space-y-8 text-[2.4rem] font-dark'>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/home' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Home</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/about' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>About</Link>
+            </li>
+            <li className='active:scale-95 transition duration-150'>
+                <Link href='/gallery' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Gallery</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/templates' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Templates</Link>
