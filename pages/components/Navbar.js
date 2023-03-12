@@ -49,7 +49,9 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center ease-in duration-200 rounded-lg'>
 
     <div className='pl-6'>
-        <Image src='/LimitlessLogo.png' alt='logo' width={92} height={70} />
+        <Link href='/' className='w-auto h-auto'>
+            <Image src='/LimitlessLogo.png' alt='logo' width={87} height={40} />
+        </Link>
     </div>
     
     <motion.div initial='hidden' animate='visible' variants={{
