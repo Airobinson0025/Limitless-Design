@@ -70,7 +70,7 @@ const About = () => {
                     <p>Bri-Anna Johnson</p>
 
                     <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-6 mt-12'>
-                       <p className='font-vibes font-bold text-[2.5rem] text-[#A24857] text-center'>Limitless Design</p>
+                       <p className='font-vibes font-bold text-[2.5rem] text-[#A24857] text-center tracking-[2px]'>Limitless Design</p>
                        <motion.button
                         onClick={() => {
                             router.push('/contact')
