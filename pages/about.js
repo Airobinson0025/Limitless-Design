@@ -49,7 +49,7 @@ const About = () => {
         }}  className='mx-6 font-dark sm:text-[1.4rem] tracking-wider max-w-[750px] bg-white p-6 mb-12 rounded-xl shadow-2xl shadow-neutral-500'>
             <h1 className='font-vibes font-bold text-[3.7rem] sm:text-[4.5rem] text-center text-[#A24857] pt-4 mb-8 '>About Us</h1>
 
-            <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] space-y-5  sm:border-neutral-600 p-6'>
+            <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] text-center sm:text-left space-y-5  sm:border-neutral-600 p-2'>
             
                 <p>Welcome to Limitless Design&apos;s About Page!</p>
             
