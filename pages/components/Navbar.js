@@ -49,7 +49,7 @@ const Navbar = () => {
     <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center ease-in duration-200 rounded-lg'>
 
     <div className='pl-6'>
-        <Image src='/LimitlessLogo.png' alt='logo' width={115} height={70} />
+        <Image src='/LimitlessLogo.png' alt='logo' width={92} height={70} />
     </div>
     
     <motion.div initial='hidden' animate='visible' variants={{
@@ -118,9 +118,7 @@ const Navbar = () => {
             </li>
            
         </ul>
-        <div className='absolute bottom-10'>
-            <Image src='/LimitlessLogo.png' alt='logo' width={220} height={100} />
-        </div>
+        
         
     </div>
 
