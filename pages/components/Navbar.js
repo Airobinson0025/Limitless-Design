@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <div style={{backgroundColor: `${color}`, backdropFilter: `${backdrop}`, boxShadow: `${shadow}`}} className='fixed w-full flex justify-between items-center ease-in duration-200 rounded-md p-2'>
 
-    <div className='pl-4'>
+    <div className='pl-2'>
         <Link href='/' className='w-auto h-auto'>
             <Image src='/LimitlessLogo2.png' alt='logo' width={105} height={80} />
         </Link>
