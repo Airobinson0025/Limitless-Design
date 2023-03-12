@@ -85,7 +85,7 @@ const Navbar = () => {
     </motion.div>
 
     
-    <div className='sm:hidden'>
+    <div className='sm:hidden pr-6'>
         <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full'>
         {dropMenu ? null : <AiOutlineMenu size={32} color='white'/>}
         </button>
