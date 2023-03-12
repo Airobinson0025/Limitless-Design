@@ -98,10 +98,10 @@ const Navbar = () => {
 
     {/* mobile menu */}
 
-    <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-white w-full h-screen bg-[#A24857] ease-in-out duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center text-white w-full h-screen bg-[#A24857] ease-out duration-300' }>
+    <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-[#A24857] w-full h-screen bg-white ease-in-out duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center text-[#A24857] w-full h-screen bg-white ease-out duration-300' }>
 
-    <button onClick={handleClick} className='bg-white py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
-        {dropMenu ? <AiOutlineClose size={27} color='#A24857'/> : null }
+    <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
+        {dropMenu ? <AiOutlineClose size={27} color='white'/> : null }
     </button>
         
         
