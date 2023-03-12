@@ -105,7 +105,7 @@ const Navbar = () => {
     </button>
         
         
-        <ul className='space-y-8 text-[2.4rem] font-dark'>
+        <ul className='space-y-4 text-[2.4rem] font-dark'>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/home' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Home</Link>
             </li>
@@ -126,6 +126,12 @@ const Navbar = () => {
             </li>
            
         </ul>
+
+        <div className='absolute bottom-7'>
+            <Link href='/' className='w-auto h-auto'>
+                <Image src='/LimitlessLogo2.png' alt='logo' width={190} height={80} />
+            </Link>
+        </div>
         
         
     </div>
