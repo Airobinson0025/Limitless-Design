@@ -90,7 +90,7 @@ const Navbar = () => {
     </motion.div>
 
     
-    <div className='sm:hidden pr-6'>
+    <div className='sm:hidden pr-4'>
         <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full'>
         {dropMenu ? null : <AiOutlineMenu size={32} color='white'/>}
         </button>
@@ -100,7 +100,7 @@ const Navbar = () => {
 
     <div className={dropMenu ? 'sm:hidden absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center text-center text-[#A24857] w-full h-screen bg-white ease-in-out duration-300 tracking-widest' : 'sm:hidden absolute top-0 bottom-0 left-[-800px] right-0 flex justify-center items-center text-center text-[#A24857] w-full h-screen bg-white ease-out duration-300' }>
 
-    <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full absolute top-[30px] right-[30px]'>
+    <button onClick={handleClick} className='bg-[#A24857] py-2 px-2 rounded-full absolute top-[20px] right-[25px]'>
         {dropMenu ? <AiOutlineClose size={32} color='white'/> : null }
     </button>
         
