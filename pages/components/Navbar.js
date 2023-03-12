@@ -127,11 +127,7 @@ const Navbar = () => {
            
         </ul>
 
-        <div className='absolute bottom-7'>
-            <Link href='/' className='w-auto h-auto'>
-                <Image src='/LimitlessLogo2.png' alt='logo' width={190} height={80} />
-            </Link>
-        </div>
+       
         
         
     </div>
