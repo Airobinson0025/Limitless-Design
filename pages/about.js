@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 
@@ -8,6 +9,10 @@ const About = () => {
     const router = useRouter()
     
     return (
+    <>
+    <NextSeo 
+    title='About Us'
+    description='Limitless Design about page' />
     <div className='flex flex-col items-center justify-evenly h-full bg-fixed bg-center bg-cover custom-img'>
 
         <motion.div 
@@ -90,6 +95,7 @@ const About = () => {
         </motion.div>
 
     </div>
+    </>
   )
 }
 

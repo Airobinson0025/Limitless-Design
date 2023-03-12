@@ -65,7 +65,7 @@ const Navbar = () => {
             }
         }
     }} >
-        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.8rem] font-bold font-dark tracking-wider sm:pr-6'>
+        <ul style={{color:`${textColor}`}} className='hidden sm:flex space-x-8 sm:text-[1.5rem] md:text-[1.7rem] font-bold font-dark tracking-wider sm:pr-6 sm:ml-10'>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/home' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Home</Link>
             </motion.li>
