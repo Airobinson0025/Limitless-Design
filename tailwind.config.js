@@ -16,7 +16,9 @@ module.exports = {
         libre: ['Libre Baskerville', 'serif'],
         dark: ['Darker Grotesque', 'sans-serif'],
         lora: ['Lora', 'serif'],
-        vibes: [ 'Great Vibes', 'cursive']
+        vibes: [ 'Great Vibes', 'cursive'],
+        prata: ['Prata', 'serif'],
+        messiri: ['El Messiri', 'san-serif'],
       }
     },
   },

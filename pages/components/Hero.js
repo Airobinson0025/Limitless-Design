@@ -18,9 +18,9 @@ const Hero = () => {
                 duration: 1.0
             }
         }
-    }} className='text-center text-stone-900 sm:text-left sm:mt-96 sm:ml-96 space-y-5'>
-            <h1 className='text-[2rem] sm:text-[3rem] font-playfair tracking-[2px]'>Limitless Design</h1>
-            <p className='font-redhat text-md text-[#A24857] sm:text-md tracking-[5px]'>GRAPHIC DESIGN & MARKETING</p>
+    }} className='text-center text-stone-900 sm:text-left sm:mt-96 sm:ml-96 space-y-4'>
+            <h1 className='text-[2.8rem] sm:text-[3.3rem] font-messiri tracking-[3px]'>LIMITLESS DESIGN</h1>
+            <p className='font-redhat text-md text-[#A24857] sm:text-md tracking-[4px]'>GRAPHIC DESIGN & MARKETING</p>
             <motion.button 
             whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='font-redhat text-md sm:text-lg border-[3px] border-black rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#A24857] transition duration-300'>Book Appointment</motion.button>
         </motion.div>
