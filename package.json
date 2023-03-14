@@ -2,21 +2,26 @@
   "name": "bri-web",
   "version": "0.1.0",
   "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db": "nodemon index.js"
   },
   "dependencies": {
     "@prisma/client": "^4.11.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "express": "^4.18.2",
     "framer-motion": "^10.2.3",
     "next": "13.2.3",
     "next-seo": "^5.15.0",
+    "nodemon": "^2.0.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.5",
     "react-icons": "^4.8.0"
   },
   "devDependencies": {

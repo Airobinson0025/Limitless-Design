@@ -11,33 +11,25 @@ datasource db {
 }
 
 model User {
-  id             String          @id @default(uuid())
-  name           String
-  email          String          @unique
-  role           Role            @default(BASIC)
-  posts          Post[]
-  userPreference UserPreference?
-
-  @@index([email])
-}
-
-model UserPreference {
-  id           String  @id @default(uuid())
-  emailUpdates Boolean
-  user         User    @relation(fields: [userId], references: [id])
-  userId       String  @unique
+  id    String @id @default(uuid())
+  email String
+  name  String
+  role  Role   @default(USER)
+  posts Post[]
 }
 
 model Post {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  img       String
   title     String
-  author    User     @relation(fields: [authorId], references: [id])
+  content   String
+  createdAt DateTime @default(now())
+  published Boolean  @default(false)
+  author    User?    @relation(fields: [authorId], references: [id])
   authorId  String
 }
 
 enum Role {
-  BASIC
-  ADMIN
+  USER
+  AMDIN
 }
