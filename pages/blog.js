@@ -30,7 +30,7 @@ const blog = ({posts}) => {
         <SearchInput />
        </div>
 
-        <button className='font-dark font-bold text-xl md:text-2xl text-[#A24857] bg-white border-2 border-[#A24857] py-1 px-2 rounded-lg hover:bg-[#A24857] hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>New Post</button>
+        <button className='font-dark font-bold text-xl md:text-2xl text-[#A24857] bg-white border-2 border-[#A24857] py-1 px-2 rounded-lg hover:bg-[#A24857] hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>new post</button>
       
       </div>
 
