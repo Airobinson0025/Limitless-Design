@@ -20,10 +20,9 @@ model User {
 
 model Post {
   id        Int      @id @default(autoincrement())
-  img       String
   title     String
   content   String
-  createdAt DateTime @default(now())
+  createdAt DateTime @default(now()) @db.Date
   published Boolean  @default(false)
   author    User?    @relation(fields: [authorId], references: [id])
   authorId  String

@@ -96,6 +96,17 @@ app.get('/users', async (req, res) => {
     res.json(users)
 })
 
+//! get user by id 
+app.get('/users/:id', async (req, res) => {
+    const { id } = req.params
+    const singleUser = await prisma.user.findUnique({
+        
+        where: { id }
+        
+    })
+    res.json(singleUser)
+})
+
 //! get admin user
 
 app.get('/user', async (req, res) => {
@@ -109,6 +120,31 @@ app.get('/user', async (req, res) => {
         
     })
     res.json(admin)
+})
+
+//! update user 
+app.put('users/:id', async (req, res) => {d
+    const { email, name } = req.body
+    const { id } = req.params
+    
+    const updateUser = await prisma.user.update({
+        where: { id },
+        data: {
+            email,
+            name
+        }
+    })
+    res.json(updateUser)
+})
+
+//! delete a user 
+app.delete('users/:id', async (req, res) => {
+    const { id } = req.params
+    const deleteUser = await prisma.user.delete({
+        
+        where: { id }
+    })
+    res.json(deleteUser)
 })
 
 

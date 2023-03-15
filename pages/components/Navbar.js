@@ -78,7 +78,7 @@ const Navbar = () => {
                 <Link href='/gallery' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Gallery</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
-                <Link href='/templates' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Shop</Link>
+                <Link href='/shop' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Shop</Link>
             </motion.li>
             <motion.li whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='hover:scale-95 transition duration-300'>
                 <Link href='/blog' className='text-stone-900 hover:text-[#A24857] transition duration-300'>Blog</Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
                 <Link href='/gallery' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Gallery</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
-                <Link href='/templates' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Shop</Link>
+                <Link href='/shop' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Shop</Link>
             </li>
             <li className='active:scale-95 transition duration-150'>
                 <Link href='/blog' onClick={handleClick} className='hover:text-[#A24857] transition duration-300'>Blog</Link>
