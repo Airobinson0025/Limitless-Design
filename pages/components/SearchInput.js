@@ -15,18 +15,18 @@ const SearchInput = ({placeholder}) => {
 
 
   return (
-    <div className='flex items-center justify-between border-2 border-gray-300 py-2 px-2 rounded-full min-w-[260px] sm:w-[500px] '>
+    <div className='flex items-center justify-between bg-white border-[3px] border-[#CC8F98] py-2 pl-4 p-2 rounded-full min-w-[260px] sm:w-[500px] '>
     <input 
     type='text'
     value={searchInput}
     onChange={(e) => setSearchInput(e.target.value)}
-    placeholder={ placeholder || 'Search Post Title' }
-    className='flex-grow bg-transparent outline-none text-md text-grey-600 placeholder-gray-400'
+    placeholder={ placeholder || 'Search by Title' }
+    className='flex-grow bg-transparent outline-none text-md text-grey-600 placeholder-stone-800'
     />
     <button 
     onClick={resetInput} 
-    className='bg-neutral-300 rounded-full px-[8px] py-[8px]'>
-       <AiOutlineSearch size={20} color='#6b7280' />
+    className='bg-[#CC8F98] rounded-full px-[8px] py-[8px]'>
+       <AiOutlineSearch size={22} color='#292524' />
     </button>
   </div>
   )

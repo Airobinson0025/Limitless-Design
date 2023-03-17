@@ -1,7 +1,10 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import SinglePost from './components/SinglePost'
+import NoPosts from './components/NoPosts'
 import { PrismaClient } from '@prisma/client'
 import SearchInput from './components/SearchInput'
+
 
 
 
@@ -10,19 +13,31 @@ import SearchInput from './components/SearchInput'
 const blog = ({posts}) => {
 
   return (
-    <div className='pt-44'>
+    <motion.div initial='hidden' animate='visible' variants={{
+      hidden: {
+          scale: .9,
+          opacity: 0
+      },
+      visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+              duration: 1.0
+          }
+      }
+  }} className='pt-24'>
       
       
-      <div className='sm:ml-12 mb-24'>
-        <h1 className='font-vibes text-center sm:text-left text-7xl md:text-8xl text-[#A24857]'>Blog</h1>
+      <div className='mx-4 mt-2 mb-4'>
+        <h1 className='font-vibes text-center text-8xl md:text-9xl text-[#CC8F98] custom-img py-12 shadow-lg border-4 border-stone-800 shadow-gray-700 rounded-lg bg-cover'>Blog</h1>
       </div>
 
       
 
-      <div className='flex justify-between items-center px-2 sm:px-6'>
+      <div className='flex justify-between items-center px-2 sm:px-6 bg-stone-800 rounded-lg py-4 mx-4'>
 
-        <div className='hidden md:inline font-dark text-6xl text-stone-700'>
-          <h1 className='text-[#A24857]'>Posts</h1>
+        <div className='hidden md:inline font-redhat text-7xl text-stone-700'>
+          <h1 className='text-white text-outline'>Posts</h1>
         </div>
         
         
@@ -30,24 +45,25 @@ const blog = ({posts}) => {
         <SearchInput />
        </div>
 
-        <button className='font-dark font-bold text-xl md:text-2xl text-[#A24857] bg-white border-2 border-[#A24857] py-1 px-2 rounded-lg hover:bg-[#A24857] hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>new post</button>
+        <button className='font-redhat font-bold text-[.85rem] md:text-lg text-[#CC8F98] bg-white border-2 border-[#CC8F98] py-1 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>New post</button>
       
       </div>
 
-     <div className='flex flex-col mt-14'> 
+     <div className='flex flex-col justify-center items-center my-8'> 
     {posts.map(post => (
 
       <SinglePost 
       key={post.id}
       title={post.title}
       content={post.content}
+      author={post.author}
       />
 
     ))}
-    </div>
+    </div> 
     
     
-    </div>
+    </motion.div>
   )
 }
 
@@ -61,6 +77,9 @@ export async function getServerSideProps() {
       
       published: true
     
+    },
+    include: {
+      author: true
     },
     orderBy: {
 

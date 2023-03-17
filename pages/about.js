@@ -47,7 +47,7 @@ const About = () => {
                 }
             }
         }}  className='mx-6 font-dark sm:text-[1.4rem] tracking-wider max-w-[750px] bg-stone-100 p-6 mb-12 rounded-xl shadow-2xl shadow-neutral-500'>
-            <h1 className='font-vibes font-bold text-[3.7rem] sm:text-[4.5rem] text-center text-[#A24857] pt-4 mb-8 '>About Us</h1>
+            <h1 className='font-vibes font-bold text-[3.7rem] sm:text-[4.5rem] text-center text-[#CC8F98] pt-4 mb-8 '>About Us</h1>
 
             <div className='text-stone-900 text-[1.3rem] sm:text-[1.4rem] text-center sm:text-left space-y-5  sm:border-neutral-600 p-2'>
             
@@ -75,14 +75,14 @@ const About = () => {
                     <p>Bri-Anna Johnson</p>
 
                     <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-6 mt-12'>
-                       <p className='font-vibes font-bold text-[2.4rem] sm:text-[2.8rem] text-[#A24857] text-center '>Limitless Design</p>
+                       <p className='font-vibes font-bold text-[2.4rem] sm:text-[2.8rem] text-[#CC8F98] text-center '>Limitless Design</p>
                        <motion.button
                         onClick={() => {
                             router.push('/contact')
                         }}
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.8}} 
-                        className='font-redhat text-[#A24857] text-md sm:text-lg border-[3px] border-[#A24857] rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#A24857] transition duration-300'>Contact Us</motion.button>
+                        className='font-redhat text-[#CC8F98] text-md sm:text-lg border-[3px] border-[#CC8F98] rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#CC8F98] transition duration-300'>Contact Us</motion.button>
         
                     </div>   
                 </div>
