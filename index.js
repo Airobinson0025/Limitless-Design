@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 5003;
 app.use(express.json());
 
-const { PrismaClient, Role } = require('@prisma/client');
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 app.get('/', (req, res) => {
@@ -11,21 +11,20 @@ app.get('/', (req, res) => {
     res.json({ message: 'working'})
 })
 
-async function main() {
 
 //! create post
 app.post('/publish',async  (req, res) => {
-    const { img, title, content } = req.body
-    const updatePost = await prisma.post.create({
+    const { title, content, published } = req.body
+    const createPost = await prisma.post.create({
         data: {
             
-            img,
             title,
-            content
+            content,
+            published:true
         }
             
     })
-    res.json(updatePost)
+    res.json(createPost)
 })
 
 //! get all posts
@@ -84,7 +83,7 @@ app.delete('/post/:id', async (req, res) => {
     res.json(deletePost)
 })
 
-}
+
 
 //********** USERS *****************/
 
@@ -153,12 +152,3 @@ app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
 
-main()
-  .then(async () => {
-    await prisma.$disconnect()
-  })
-  .catch(async (e) => {
-    console.error(e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })

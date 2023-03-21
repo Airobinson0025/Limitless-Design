@@ -21,12 +21,12 @@ const SearchInput = ({placeholder}) => {
     value={searchInput}
     onChange={(e) => setSearchInput(e.target.value)}
     placeholder={ placeholder || 'Search by Title' }
-    className='flex-grow bg-transparent outline-none text-md text-grey-600 placeholder-stone-800'
+    className='flex-grow bg-transparent outline-none text-md text-grey-600 placeholder-gray-400'
     />
     <button 
     onClick={resetInput} 
     className='bg-[#CC8F98] rounded-full px-[8px] py-[8px]'>
-       <AiOutlineSearch size={22} color='#292524' />
+       <AiOutlineSearch size={22} color='white' />
     </button>
   </div>
   )

@@ -1,9 +1,10 @@
-import React from 'react'
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import SinglePost from './components/SinglePost'
-import NoPosts from './components/NoPosts'
 import { PrismaClient } from '@prisma/client'
 import SearchInput from './components/SearchInput'
+import CreatePost from './components/CreatePost'
 
 
 
@@ -11,6 +12,12 @@ import SearchInput from './components/SearchInput'
 
 
 const blog = ({posts}) => {
+
+  const [ createForm, setCreateForm ] = useState(false)
+
+  const handleClick = () => {
+    setCreateForm(!createForm)
+  }
 
   return (
     <motion.div initial='hidden' animate='visible' variants={{
@@ -45,9 +52,23 @@ const blog = ({posts}) => {
         <SearchInput />
        </div>
 
-        <button className='font-redhat font-bold text-[.85rem] md:text-lg text-[#CC8F98] bg-white border-2 border-[#CC8F98] py-1 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>New post</button>
+        <button 
+        onClick={handleClick}
+        className='font-redhat font-bold text-[.85rem] md:text-lg text-[#CC8F98] bg-white border-2 border-[#CC8F98] py-1 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>New post</button>
+
+        
+
+        {createForm ? 
+        <CreatePost 
+        posts={posts}
+        title={posts.title}
+        content={posts.content} /> : null} 
+
+        
       
       </div>
+
+      
 
      <div className='flex flex-col justify-center items-center my-8'> 
     {posts.map(post => (
