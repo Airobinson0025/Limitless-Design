@@ -50,7 +50,7 @@ const Navbar = () => {
 
     <div className='pl-2'>
         <Link href='/' className='w-auto h-auto'>
-            <Image src='/LimitlessLogo2.png' alt='logo' width={105} height={80} />
+            <Image src='/LimitlessLogo2.png' alt='logo' width={90} height={80} />
         </Link>
     </div>
     

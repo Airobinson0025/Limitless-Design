@@ -41,10 +41,10 @@ const blog = ({posts}) => {
 
       
 
-      <div className='flex justify-between items-center px-2 sm:px-6 bg-stone-800 rounded-lg py-4 mx-4'>
+      <div className='flex justify-between items-center px-2 sm:px-6 custom-img border-[3px] border-stone-800 rounded-lg py-4 mx-4'>
 
         <div className='hidden md:inline font-redhat text-7xl text-stone-700'>
-          <h1 className='text-white text-outline'>Posts</h1>
+          <h1 className='text-stone-800 text-outline'>Posts</h1>
         </div>
         
         
