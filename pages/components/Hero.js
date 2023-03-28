@@ -22,7 +22,7 @@ const Hero = () => {
             <h1 className='text-[2.4rem] sm:text-[3.3rem] font-playfair tracking-[2px]'>Limitless Design</h1>
             <p className='font-redhat text-md text-[#CC8F98] sm:text-md tracking-[4px]'>GRAPHIC DESIGN & MARKETING</p>
             <motion.button 
-            whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='font-redhat text-md sm:text-lg border-[3px] border-black rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#CC8F98] transition duration-300 mt-4'>Book Appointment</motion.button>
+            whileHover={{scale: 1.1}} whileTap={{scale: 0.8}} className='font-redhat text-md sm:text-lg border-[3px] border-black rounded-md py-2 px-4 tracking-wider hover:border-transparent hover:text-white hover:bg-[#CC8F98] transition duration-300 mt-4'>Contact Us</motion.button>
         </motion.div>
 
 

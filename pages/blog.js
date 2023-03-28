@@ -1,23 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import SinglePost from './components/SinglePost'
-import { PrismaClient } from '@prisma/client'
 import SearchInput from './components/SearchInput'
-import CreatePost from './components/CreatePost'
 
 
+const blog = () => {
 
 
+ const [ posts, setPosts ] = useState([])
+
+ useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await fetch('/api/posts/posts')
+      const posts = await res.json()
+      setPosts(posts)
+    }
+    fetchPosts()
+ }, []);
 
 
-const blog = ({posts}) => {
-
-  const [ createForm, setCreateForm ] = useState(false)
-
-  const handleClick = () => {
-    setCreateForm(!createForm)
-  }
 
   return (
     <motion.div initial='hidden' animate='visible' variants={{
@@ -36,14 +39,14 @@ const blog = ({posts}) => {
       
       
       <div className='mx-4 mt-2 mb-4'>
-        <h1 className='font-vibes text-center text-8xl md:text-9xl text-[#CC8F98] custom-img py-12 shadow-lg border-4 border-stone-800 shadow-gray-700 rounded-lg bg-cover'>Blog</h1>
+        <h1 className='font-vibes text-center text-8xl md:text-9xl text-[#CC8F98] custom-img py-12 shadow-md border-[3px] border-stone-800 rounded-lg bg-cover'>Blog</h1>
       </div>
 
       
 
-      <div className='flex justify-between items-center px-2 sm:px-6 custom-img border-[3px] border-stone-800 rounded-lg py-4 mx-4'>
+      <div className='flex justify-between items-center px-2 sm:px-6 custom-img border-[3px] border-stone-800 rounded-t-lg py-4 mx-4'>
 
-        <div className='hidden md:inline font-redhat text-7xl text-stone-700'>
+        <div className='hidden md:inline font-redhat text-5xl text-stone-700'>
           <h1 className='text-stone-800 text-outline'>Posts</h1>
         </div>
         
@@ -52,28 +55,21 @@ const blog = ({posts}) => {
         <SearchInput />
        </div>
 
-        <button 
-        onClick={handleClick}
-        className='font-redhat font-bold text-[.85rem] md:text-lg text-[#CC8F98] bg-white border-2 border-[#CC8F98] py-1 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white hover:translate-y-1 hover:scale-95 transition duration-300'>New post</button>
+        <Link 
+        href='/create-post'
+        className='font-redhat font-bold text-[.55rem] md:text-[1.1em] text-[#CC8F98] bg-white border-2 border-[#CC8F98] py-2 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white hover:translate-y-1 hover:scale-95 transition duration-500'>New Post</Link>
 
-        
-
-        {createForm ? 
-        <CreatePost 
-        posts={posts}
-        title={posts.title}
-        content={posts.content} /> : null} 
-
-        
-      
       </div>
 
       
 
-     <div className='flex flex-col justify-center items-center my-8'> 
-    {posts.map(post => (
+     <div className='flex flex-col justify-center items-center mb-8 mx-4  sm:bg-gray-100 sm:rounded-b-lg  sm:border-x-[3px] sm:border-b-[3px] sm:border-stone-800'> 
+    {posts?.map(post => (
 
       <SinglePost 
+      post={post}
+      posts={posts}
+      setPosts={setPosts}
       key={post.id}
       title={post.title}
       content={post.content}
@@ -90,25 +86,3 @@ const blog = ({posts}) => {
 
 export default blog
 
-export async function getServerSideProps() {
-  const prisma = new PrismaClient()
-  const safeJsonStringify = require('safe-json-stringify')
-  const posts = await prisma.post.findMany({
-    where: {
-      
-      published: true
-    
-    },
-    include: {
-      author: true
-    },
-    orderBy: {
-
-      createdAt: 'desc'
-    
-    }
-  })
-  return {
-    props: JSON.parse(safeJsonStringify({posts}))
-  }
-}
