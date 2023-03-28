@@ -44,10 +44,10 @@ const blog = () => {
 
       
 
-      <div className='flex justify-between items-center px-2 sm:px-6 custom-img border-[3px] border-stone-800 rounded-t-lg py-4 mx-4'>
+      <div className='flex justify-between items-center px-2 sm:px-6 bg-zinc-400 border-[3px] border-stone-800 rounded-t-lg py-4 mx-4'>
 
         <div className='hidden md:inline font-redhat text-5xl text-stone-700'>
-          <h1 className='text-stone-800 text-outline'>Posts</h1>
+          <h1 className='text-stone-100 text-outline'>Posts</h1>
         </div>
         
         
@@ -63,7 +63,7 @@ const blog = () => {
 
       
 
-     <div className='flex flex-col justify-center items-center mb-8 mx-4  sm:bg-gray-100 sm:rounded-b-lg  sm:border-x-[3px] sm:border-b-[3px] sm:border-stone-800'> 
+     <div className='flex flex-col justify-center items-center mb-8 mx-4 custom-img sm:rounded-b-lg  sm:border-x-[3px] sm:border-b-[3px] sm:border-stone-800'> 
     {posts?.map(post => (
 
       <SinglePost 

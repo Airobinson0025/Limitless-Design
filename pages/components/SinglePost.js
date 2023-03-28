@@ -19,8 +19,10 @@ return (
     <NextSeo 
     title='Blog'
     description='Limitless Design blog page' />
+
     
-    <div className='flex flex-col space-y-4 bg-stone-50 py-10 mx-4 pt-10 my-6 sm:my-8 first-of-type:mt-8 sm:first-of-type:mt-12 w-[360px] sm:w-[500px] md:w-[650px] lg:w-[1000px] xl:w-[1100px] shadow-md shadow-zinc-500 rounded-lg'>
+    
+    <div className='flex flex-col space-y-4 bg-stone-50 py-10 mx-4 pt-10 my-6 sm:my-8 first-of-type:mt-8 sm:first-of-type:mt-12 w-[310px] sm:w-[500px] md:w-[650px] lg:w-[1000px] xl:w-[1100px] shadow-md shadow-zinc-500 rounded-lg'>
         
         <h1 className='font-redhat text-3xl md:text-4xl text-[#CC8F98] pl-4'>{title}</h1>
         <p className='font-dark text-xl md:text-[1.4rem] tracking-wide px-4 max-h-[200px] text-ellipsis overflow-hidden py-6'>{content}</p>
@@ -30,7 +32,7 @@ return (
                <button className='font-redhat font-bold text-[1rem] text-white py-1 px-3 bg-gray-400  border-2 hover:bg-gray-500 hover:text-white hover:border-transparent rounded-lg transition duration-500'>View post</button>
                <button
                onClick={handleClick}
-               className='font-redhat font-bold text-[1rem] text-white py-1 px-3 bg-rose-400  border-2 hover:bg-rose-500 hover:text-white hover:border-transparent rounded-lg transition duration-500'>Delete</button>
+               className='font-redhat font-bold text-[1rem] text-white py-1 px-3 bg-rose-500  border-2 hover:bg-rose-600 hover:text-white hover:border-transparent rounded-lg transition duration-500'>Delete</button>
            </div>
         </div>
     
