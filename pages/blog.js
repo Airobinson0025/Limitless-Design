@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import SinglePost from './components/SinglePost'
 import SearchInput from './components/SearchInput'
+import NoPosts from './components/NoPosts'
 
 
 const blog = () => {
@@ -57,11 +58,11 @@ const blog = () => {
 
         <Link 
         href='/create-post'
-        className='font-redhat font-bold text-[.55rem] md:text-[1.1em] text-[#CC8F98] bg-white border-2 border-[#CC8F98] py-2 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white hover:translate-y-1 hover:scale-95 transition duration-500'>New Post</Link>
+        className='font-redhat font-bold text-[.55rem] md:text-[1.1em] text-white bg-[#d1a4ab] border-2 border-white py-2 px-2 rounded-lg hover:bg-[#CC8F98] hover:border-transparent hover:text-white  transition duration-500'>New Post</Link>
 
       </div>
 
-      
+     {posts.length === 0 ? <NoPosts posts={posts} setPosts={setPosts} /> : 
 
      <div className='flex flex-col justify-center items-center mb-8 mx-4 custom-img sm:rounded-b-lg  sm:border-x-[3px] sm:border-b-[3px] sm:border-stone-800'> 
     {posts?.map(post => (
@@ -73,11 +74,11 @@ const blog = () => {
       key={post.id}
       title={post.title}
       content={post.content}
-      author={post.author}
+      author={post.author.name}
       />
 
     ))}
-    </div> 
+    </div> }
     
     
     </motion.div>

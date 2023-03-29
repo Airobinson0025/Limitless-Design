@@ -27,7 +27,7 @@ return (
         <h1 className='font-redhat text-3xl md:text-4xl text-[#CC8F98] pl-4'>{title}</h1>
         <p className='font-dark text-xl md:text-[1.4rem] tracking-wide px-4 max-h-[200px] text-ellipsis overflow-hidden py-6'>{content}</p>
         <div className='flex flex-col sm:flex-row items-center justify-center sm:justify-between px-6 pt-4 space-y-3'>
-           <p className='font-dark text-gray-500 text-xl md:text-2xl'>Published by: {author.name}</p>
+           <p className='font-dark text-gray-500 text-xl md:text-2xl'>Published by: {author}</p>
            <div className='space-x-3'>
                <button className='font-redhat font-bold text-[1rem] text-white py-1 px-3 bg-gray-400  border-2 hover:bg-gray-500 hover:text-white hover:border-transparent rounded-lg transition duration-500'>View post</button>
                <button
